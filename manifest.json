@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "1 fichier helper",
+  "description": "This extension to help dll on 1 fichier",
+  "version": "1.0.3",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": { "128": "icon.png" },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://1fichier.com/*", "http://1fichier.com/*"],
+      "css": ["dll.css"],
+      "js": ["jquery-1.11.3.min.js", "dll.js"],
+      "all_frames": true
+    }
+  ] 
+}

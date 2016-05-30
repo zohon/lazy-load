@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "1 fichier helper",
-  "description": "This extension to help dll on 1 fichier",
+  "description": "This extension to help download on 1 fichier",
   "version": "1.0.3",
   "background": {
     "scripts": ["background.js"]
@@ -20,5 +20,5 @@
       "js": ["jquery-1.11.3.min.js", "dll.js"],
       "all_frames": true
     }
-  ] 
+  ]
 }

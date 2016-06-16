@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "1 fichier helper",
   "description": "This extension to help download on 1 fichier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "background": {
     "scripts": ["background.js"]
   },
@@ -15,7 +15,14 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://1fichier.com/*", "http://1fichier.com/*"],
+      "matches": [
+        "https://*.1fichier.com/*",
+        "http://*.1fichier.com/*",
+        "https://1fichier.com/*",
+        "http://1fichier.com/*",
+        "https://www.dl-protect.com/*",
+        "http://www.dl-protect.com/*"
+      ],
       "css": ["dll.css"],
       "js": ["jquery-1.11.3.min.js", "dll.js"],
       "all_frames": true

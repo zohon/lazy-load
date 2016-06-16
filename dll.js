@@ -2,14 +2,33 @@
 
 function init() {
     console.log("Init");
-
     loop();
-
-
 }
 
 function loop() {
     console.log("Init");
+
+      console.log('search links');
+      console.log($('.divgloballinks .divlink a'));
+
+      if($('.divgloballinks .divlink a').length > 0) {
+        console.log('active links');
+        $.each($('.divgloballinks .divlink a'), function(index, item) {
+            $(item).get(0).click();
+        });
+        window.close();
+        return true;
+      }
+
+    if($("form[name='ccerure'] input[type='submit']").length > 0 && !$('#captcha').length) {
+      console.log("test ccerure");
+      console.log($("form[name='ccerure'] input[type='submit']"));
+      setTimeout(function() {
+        $("form[name='ccerure'] input[type='submit']").click();
+      }, 2000);
+      return true;
+    }
+
 
     console.log($('form'));
 
@@ -86,5 +105,3 @@ function showTinming() {
         }
   });
 })(jQuery);
-
-
